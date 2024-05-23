@@ -17,6 +17,51 @@ height: 100vh;
 background-image: url(images/background.png);
 background-size: cover;
 background-position: center;
+animation: background-image-animation linear forwards;
+transform-origin: bottom;
+animation-timeline: view();
+animation-range: exit;
+}
+
+@keyframes fade-out {
+     to {opacity: 0;}   
+}
+@keyframes background-image-animation {
+        25% {opacity: 1;}
+        85%, 100% {opacity: 0; scale: 3}
+
+}
+h2{
+        position: relative;
+        font: 10vw;
+        color: #fff;
+       
+        text-transform: initial;
+}
+h2::before{
+        content:attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: #676b68;
+       
+        border-right: 2px solid #fff;
+        overflow: hidden;
+        animation: animate 1.5s linear infinite;
+}
+@keyframes animate
+{
+        0%,10%,100%
+        {
+                width: 0;
+        }
+       
+        70%,90%
+        {
+                width: 14%;
+        }
 }
 .container{
         padding: 10px 10%;
@@ -58,12 +103,17 @@ nav ul li a:hover::after{
 .header-text{
         margin-top: 20%;
         font-size: 30px;
+        animation: fade-out linear;
 }
 .header-text h1{
-font-size: 60px;
+font-size: 30px;
 margin-top: 20px;
+animation: fade-out linear;
+animation-timeline: view();
+animation-range: exit -1px;
 }
 .header-text h1 span{
+        font-size: 70px;
         color:#8f9779 ;
 }
 /*------about------*/
@@ -336,13 +386,46 @@ nav .fa-solid{
                 background-image: url(images/phone-background.png);
         }
         .header-text{
-                margin-top: 72%;
+                margin-top: 90%;
                 font-size: 16px;
+                opacity: 100%;
         
         }
         .header-text h1{
                 font-size: 30px;
         }
+        h2{
+                position: relative;
+                font: 10vw;
+                color: #fff;
+               
+                text-transform: initial;
+        }
+        h2::before{
+                content:attr(data-text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 50%;
+                color: #676b68;
+               
+                border-right: 2px solid #fff;
+                overflow: hidden;
+                animation: animate 1.5s linear infinite;
+        }
+        @keyframes animate
+{
+        0%,10%,100%
+        {
+                width: 0;
+        }
+       
+        70%,90%
+        {
+                width: 37%;
+        }
+}
         nav .fa-solid{
                 display: block;
                 font-size: 25px;
