@@ -79,6 +79,15 @@ flex-wrap: wrap;
 
 .about-col-1{
         flex-basis: 35%;
+        background: #262626;
+        border-radius: 15px ;
+        padding-bottom: 5px;
+        padding-top: 7px;
+        padding-left: 7px;
+        padding-right: 7px;
+        margin-bottom: 100px;
+      
+
 }
 .about-col-1 img{
         width: 100%;
