@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content ="IE-edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nathan's World</title>
+	<title>Nathan Rahbar</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
@@ -17,8 +17,8 @@
 			<img src="images/logo.png" class="logo">
 			<ul id="sidemenu">
 				<li><a href="#header">Home</a></li>
-				<li><a href="#about">Skills</a></li>
-				<li><a href="#portfolio">Projects</a></li>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<i class="fa-solid fa-xmark" onclick="closemenu()"></i>
 			</ul>
@@ -39,10 +39,7 @@
 		</div>
 		<div class="about-col-2">
 			<h1 class="sub-title">About Me</h1>
-			<p>Hi! Nice to meet you, my name is Nathan. As of writing this, I
-				am currrently a student at Cal Poly Pomona! I'm
-				majoring in Computer Engineering, and my dream job is to
-				be a hardware designer at Nvidia.</p>
+			<p>I'm a Junior at Cal Poly Pomona pursuing a B.S. in Computer Engineering with a deep interest in hardware design, PCB layout, and embedded systems. I'm passionate about how electronic systems are built from the circuit level up—designing, testing, and iterating to bring ideas to life.</p>
 
 				<div class="tab-titles">
 					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -53,20 +50,19 @@
 					<ul>
 						<li><span>Circuit Analysis</span><br>Analyzing Circuits</li>
 						<li><span>Digital Logic Design</span><br>Designing Digital Logic Circuits</li>
-						<li><span>C++</span><br>Fluent in the language, C++</li>
-						<li><span>Verilog</span><br>Fluent in the language, Verilog</li>
+						<li><span>PCB Design</span><br>Designing PCBs, using Altium Designer.</li>
 						<li><span>PSpice</span><br>Design and Simulate Circuits</li>
 					</ul>
 				</div>
 				<div class="tab-contents" id="experience">
 					<ul>
-						<li><span>2023-Current</span><br>Server/Host/Busser at Top BBQ Noodle</li>
+						<li><span>2023-2024</span><br>Server/Host/Busser at Top BBQ Noodle</li>
 						<li><span>2021-2022</span><br>Level 4 Work Associate at In-N-Out</li>
 					</ul>
 				</div>
 				<div class="tab-contents" id="education">
 					<ul>
-						<li><span>2022-Current</span><br>Computer Engineering B.S at Cal Poly Pomona<br> GPA: 3.57</li>
+						<li><span>2022-Current</span><br>Computer Engineering B.S at Cal Poly Pomona<br> GPA: 3.7</li>
 						<li><span>2018-2022</span><br>North High School<br>GPA: 3.5</li>
 
 					</ul>
@@ -95,33 +91,69 @@
 		<h1 class="sub-title">Portfolio</h1>	
 		<div class="work-list">
 			<div class="work">
-				<img src="images/work-1.png" >
+				<img src="images/work-1.jpg" >
 				<div class="layer">
 					<h3>Automatic Music Sensor</h3>
 					<p>Plays/resumes music once you leave/enter your room.</p>
-					<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+					<a href="mc.html#music"><i class="fa-solid fa-up-right-from-square"></i></a>
 				</div>
 			</div>
 			<div class="work">
-				<img src="images/work-2.jpg" >
+				<img src="images/work-2.png" >
 				<div class="layer">
-					<h3>Calculator</h3>
-					<p>A simple calculator that can add, subtract, divide, and multiply.</p>
-					<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+					<h3>Video Game Controller</h3>
+					<p>Designed a PCB for a Video Game Controller using Altium Designer.</p>
+					<a href="vc.html"><i class="fa-solid fa-up-right-from-square"></i></a>
 				</div>
 			</div>
 			<div class="work">
 				<img src="images/work-3.png" >
 				<div class="layer">
-					<h3>COMING SOON</h3>
-					<p>COMING SOON</p>
-					<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+					<h3>Noise Pulse Eliminator</h3>
+					<p>Developed a Noise Pulse Eliminator circuit using Verilog to filter out unwanted noise pulses in digital signals.</p>
+					<a href="np.html#music"><i class="fa-solid fa-up-right-from-square"></i></a>
 				</div>
 			</div>
 		</div>
-		<a href="#" class="btn">See more</a>
 	</div>
 </div>
+
+<!-- Project Teams Section -->
+<div id="project-teams">
+	<div class="container">
+	  <h1 class="sub-title">Project Teams</h1>
+	  <div class="work-list">
+		<!-- Team 1 -->
+		<div class="work">
+		  <img src="images/ngcp.jfif" alt="Team 1">
+		  <div class="layer">
+			<h3>Northrop Grumman Collaboration Project</h3>
+			<p>Collaborating on the design and development of a Nucleo Shield for an Unmanned Ground Vehicle (UGV)</p>
+			<a href="ngcp.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+		  </div>
+		</div>
+		<!-- Team 2 -->
+		<div class="work">
+		  <img src="images/fsae.jfif" alt="Team 2">
+		  <div class="layer">
+			<h3>Formula SAE</h3>
+			<p>Designed and developed PCBs and schematics using Altium Designer for the vehicle's electronic systems</p>
+			<a href="fsae.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+		  </div>
+		</div>
+		<!-- Team 3 -->
+		<div class="work">
+		  <img src="images/cemarc.png" alt="Team 3">
+		  <div class="layer">
+			<h3>CEMARC</h3>
+			<p>Contributing to the design and fully autonomous recovery system for a launch vehicle.</p>
+			<a href="cemarc.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
 <!------------contact--------->
 <div id="contact">
 	<div class="container">
@@ -131,10 +163,9 @@
 				<p><i class="fa-solid fa-inbox"></i>naterahbar@gmail.com</p>
 				
 				<div class="social-icons">
-					<a href="https://www.linkedin.com/in/nathan-rahbar-7a9627255/"><i class="fa-brands fa-linkedin-in"></i></a>
-					<a href="https://www.instagram.com/9athan"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/in/nathanrahbar/"><i class="fa-brands fa-linkedin-in"></i></a>
 				</div>
-				<a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+				
 			</div>
 			<div class="contact-right">
 				<form name="submit-to-google-sheet">
