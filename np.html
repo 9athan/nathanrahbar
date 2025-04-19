@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noise Pulse Eliminator</title>
+  <link rel="stylesheet" href="np.css">
+  <script src="https://kit.fontawesome.com/cc6fc5e849.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-wrapper">
+    <ul class="nav-menu">
+      <li><a href="index.html#header">Home</a></li>
+      <li><a href="index.html#about">About Me</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Title Section -->
+  <div class="content-section">
+    <h1>Noise Pulse Eliminator</h1>
+    <p>by Nathan Rahbar</p>
+  </div>
+
+  <!-- Project Overview -->
+  <div class="content-section description">
+    <p>This project implements a circuit that eliminates noise pulses—transitions lasting only one clock cycle or less—by filtering out high/low spikes and producing a clean, stabilized output signal. The system uses a finite state machine and Verilog HDL to detect valid input changes while suppressing glitches.</p>
+  </div>
+
+  <!-- Deliverables -->
+  <div class="content-section">
+    <h2>Deliverables</h2>
+    <ul class="project-list">
+      <li><strong>FSM Design:</strong> Create a state diagram with four states and one Moore output.</li>
+      <li><strong>Verilog Module:</strong> Code the logic using one or two always blocks with appropriate state encoding.</li>
+      <li><strong>Testbench:</strong> Simulate using a given input sequence to verify the design.</li>
+    </ul>
+  </div>
+
+  <!-- Future Improvements -->
+  <div class="content-section">
+    <h2>Future Improvements</h2>
+    <ul class="project-list">
+      <li><strong>Adjustable Noise Threshold:</strong> Enable the system to dynamically adjust filtering thresholds based on operating conditions.</li>
+      <li><strong>Asynchronous Input Handling:</strong> Add synchronization logic for asynchronous signal environments.</li>
+    </ul>
+  </div>
+  <!-- Link to Code -->
+  <div class="content-section">
+    <h2>Code</h2>
+    <p>You can view the full Verilog implementation and simulation on HDLBits:</p>
+    <a href="https://hdlbits.01xz.net/wiki/Iverilog?load=cEEp9E" class="repo-link" target="_blank">View Code</a>
+  </div>
+
+  <!-- Images Section -->
+  <div class="content-section">
+    <div class="image-stack">
+      <img src="images/fsm.png" alt="FSM Diagram">
+      <img src="images/waveform.png" alt="Waveform Timing">
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nathan's Portfolio. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

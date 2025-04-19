@@ -1,0 +1,158 @@
+/* General Styles */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+    }
+    
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Header Section */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+    
+    header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+    
+    header nav .fa-bars,
+    header nav .fa-xmark {
+        display: none;
+    }
+    
+    header .header-text h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    
+    header .header-text p {
+        font-size: 1.2em;
+    }
+    
+    /* Portfolio Section */
+    .portfolio-section {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.2em;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    
+    .work-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .work {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .work img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .work:hover img {
+        transform: scale(1.1);
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .work:hover .overlay {
+        opacity: 1;
+    }
+    
+    .overlay h3 {
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+    
+    .overlay p {
+        color: #ccc;
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    
+    .overlay a {
+        color: #fff;
+        font-size: 1.5em;
+    }
+    
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+        header nav ul {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            padding: 20px;
+            text-align: right;
+        }
+    
+        header nav ul li {
+            margin-bottom: 20px;
+        }
+    
+        header nav .fa-bars {
+            display: block;
+            color: #fff;
+            font-size: 1.5em;
+        }
+    
+        header nav ul.show {
+            display: flex;
+        }
+    }
+    
