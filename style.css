@@ -1,7 +1,7 @@
         *{
 margin: 0;
 padding: 0;
-font-family: 'Poppins', sans-serif;
+font-family: 'Courier New', monospace;
 box-sizing: border-box;
         }
         html{
@@ -12,58 +12,11 @@ box-sizing: border-box;
           color:#fff;
         }
 #header{
-width: 100%;
-height: 100vh;
-background-image: url(images/background.png);
+
 background-size: cover;
 background-position: center;
-animation: background-image-animation linear backwards;
-transform-origin: top;
-animation-timeline: view();
-animation-range: exit;
 }
 
-
-@keyframes fade-out {
-     to {opacity: 0;}   
-}
-@keyframes background-image-animation {
-        25% {opacity: 1;}
-        85%, 100% {opacity: 0; scale: 2}
-
-}
-h2{
-        position: relative;
-        font: 10vw;
-        color: #fff;
-       
-        text-transform: initial;
-}
-h2::before{
-        content:attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        color: #717886;
-       
-        border-right: 2px solid #fff;
-        overflow: hidden;
-        animation: animate 2s linear infinite;
-}
-@keyframes animate
-{
-        0%,10%,100%
-        {
-                width: 0;
-        }
-       
-        70%,90%
-        {
-                width: 14%;
-        }
-}
 .container{
         padding: 10px 10%;
 }
@@ -73,15 +26,11 @@ nav{
         justify-content: space-between;
         flex-wrap: wrap;
 }
-.logo{
-        width: 200px;
-        margin-top: -50px;
-        margin-left: -40px;
-}
+
 nav ul li{      
         display: inline-block;
         list-style: none;
-        margin: 10px 20px;
+        margin: 20px;
 }
 nav ul li a{  
 color: #fff;
@@ -131,10 +80,9 @@ flex-wrap: wrap;
 
 .about-col-1{
         flex-basis: 35%;
-        background: #262626;
         border-radius: 15px ;
         padding-bottom: 5px;
-        padding-top: 7px;
+        padding-top: 120px;
         padding-left: 7px;
         padding-right: 7px;
         margin-bottom: 100px;
@@ -455,7 +403,6 @@ nav .fa-solid{
 
 @media only screen and (max-width: 667px){
         #header{
-                background-image: url(images/phone-background.png);
         }
         .header-text{
                 margin-top: 90%;
@@ -466,38 +413,8 @@ nav .fa-solid{
         .header-text h1{
                 font-size: 30px;
         }
-        h2{
-                position: relative;
-                font: 10vw;
-                color: #fff;
-               
-                text-transform: initial;
-        }
-        h2::before{
-                content:attr(data-text);
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 0;
-                height: 50%;
-                color: #676b68;
-               
-                border-right: 2px solid #fff;
-                overflow: hidden;
-                animation: animate 1.5s linear infinite;
-        }
-        @keyframes animate
-{
-        0%,10%,100%
-        {
-                width: 0;
-        }
        
-        70%,90%
-        {
-                width: 37%;
-        }
-}
+       
         nav .fa-solid{
                 display: block;
                 font-size: 25px;
@@ -515,7 +432,7 @@ nav .fa-solid{
         }
         nav ul li{
                 display: block;
-                margin: 25px;   
+ 
         }
         nav ul .fa-solid{
                 position: absolute;
