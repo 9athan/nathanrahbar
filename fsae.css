@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Courier New', monospace;
   }
   
   html, body {
@@ -56,92 +56,10 @@ nav {
     width: 100%;
   }
   
-  /* Race Car Animation with Effects */
-  .racecar-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-    pointer-events: none;
-    background: linear-gradient(to bottom, #0F3D0F 0%, #665100 100%);
-  }
-  
-  .racecar {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 120px;
-    animation: driveLoop 8s linear infinite;
-    opacity: 0.9;
-    filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
-    transition: transform 1s ease;
-  }
-  
-  @keyframes driveLoop {
-    0% {
-      transform: translateX(0) rotate(0deg);
-    }
-    15% {
-      transform: translateX(30vw) rotate(0deg);
-    }
-    35% {
-      transform: translateX(30vw) rotate(360deg);
-    }
-    65% {
-      transform: translateX(30vw) rotate(0deg);
-    }
-    85% {
-      transform: translateX(60vw) rotate(0deg);
-    }
-    100% {
-      transform: translateX(100vw) rotate(0deg);
-    }
-  }
-  
-  /* Smoke Trails */
-  .racecar::after {
-    content: '';
-    position: absolute;
-    left: -90px;
-    bottom: 10px;
-    width: 100px;
-    height: 40px;
-    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
-    filter: blur(8px) brightness(0.9);
-    animation: smoke 4s ease-in-out infinite;
-    z-index: -1;
-    box-shadow: 0 0 15px rgba(255,255,255,0.1);
-    opacity: 0.5;
-  }
-  
-  @keyframes smoke {
-    0%   { transform: scale(0.8) translateX(0); opacity: 0.6; }
-    50%  { transform: scale(1.2) translateX(-20px); opacity: 0.3; }
-    100% { transform: scale(0.8) translateX(-40px); opacity: 0; }
-  }
-  
-  /* Tire Skid Mark */
-  .racecar-bg::before {
-    content: '';
-    position: absolute;
-    bottom: 8%;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: repeating-linear-gradient(
-      to right,
-      rgba(80, 80, 80, 0.3) 0 10px,
-      transparent 10px 20px
-    );
-    z-index: 0;
-  }
-  
+
   /* Content Sections */
   .content-section {
-    height: 100vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
