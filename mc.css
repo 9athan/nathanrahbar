@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Courier New', monospace;
 }
 
 html, body {
@@ -49,7 +49,7 @@ html, body {
 
 /* Content Sections */
 .content-section {
-  min-height: 100vh;
+  min-height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
