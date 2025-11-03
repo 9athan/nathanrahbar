@@ -1,61 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEMARC Rocket Avionics</title>
-  <link rel="stylesheet" href="cemarc.css">
-  <script src="https://kit.fontawesome.com/cc6fc5e849.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CEMARC — Nathan Rahbar</title>
+
+  <!-- Site-wide styles + Inter (same vibe as index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+
+
+  <!-- Page-specific tweaks -->
+  <link rel="stylesheet" href="cemarc.css" />
+  <script src="lightbox.js"></script>
+
 </head>
 <body>
-
-  <!-- Rocket Background (centered graphic) -->
-  <div class="rocket-container">
-    <img src="images/rocket.png" alt="Rocket Graphic" class="rocket">
-  </div>
-
-  <!-- Navigation -->
-  <nav class="nav-wrapper">
-    <ul class="nav-menu">
-      <li><a href="index.html#header">Home</a></li>
-      <li><a href="index.html#about">About Me</a></li>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Title Section -->
-  <div class="content-section">
-    <h1>CEMARC</h1>
-    <p>A private club working on the design of a fully autonomous recovery system for a launch vehicle.</p>
-  </div>
-
-  <!-- Project Overview -->
-  <div class="content-section description">
-    <p>My role is in the <strong>Avionics Team</strong>, where I contributed to the design and integration of telemetry systems for a competition-grade autonomus recovery system.</p>
-  </div>
-
-  <!-- Deliverables -->
-  <div class="content-section">
-    <h2>Accomplishments</h2>
-    <ul class="project-list">
-      <li>Responsible for researching and selecting components, creating trade matrices, and designing wiring diagrams. </li>
-      <li>Engaged in battery management and PCB design to optimize avionics systems for the rocket.</li>
-      <li>Collaborating with cross-functional teams to ensure successful integration of avionics and flight systems. </li>
-    </ul>
-  </div>
-
-  <!-- Image Stack -->
-  <div class="content-section">
-    <div class="image-stack">
-      <img src="images/cem_schem.png" alt="PCB Design">
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
-  </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero container">
+    <div class="page-hero__copy">
+      <h1 class="display">CEMARC</h1>
+      <p class="lead">Autonomous recovery avionics for a competition-grade launch vehicle.</p>
+      <div class="meta">
+        <span class="badge">Role: Avionics</span>
+      </div>
+    </div>
+    <figure class="page-hero__shot" aria-hidden="true"></figure>
+  </section>
+
+  <!-- Overview -->
+  <section class="section container">
+    <h2 class="h2">Overview</h2>
+    <p class="muted">
+      I contributed on the <strong>Avionics team</strong> designing and integrating telemetry and recovery electronics for
+      CEMARC’s autonomous descent system. Work spanned component trade studies, harness/PCB design, and integration.
+    </p>
+  </section>
+
+  <!-- Accomplishments -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Accomplishments</h2>
+      <ul class="list">
+        <li>Built trade matrices for radios, sensors, and compute; selected parts for reliability and BOM efficiency.</li>
+        <li>Drafted wiring diagrams and prelim PCB layouts for power/telemetry blocks; iterated with mech/flight teams.</li>
+        <li>Defined battery management approach and protection; verified interfaces and grounding strategy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section container">
+    <h2 class="h2">Gallery</h2>
+    <div class="gallery">
+      <figure class="card">
+        <img src="images/cem_schem.png" alt="CEMARC avionics schematic" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Avionics schematic</strong>
+          <p class="muted">Draft wiring/blocks for recovery &amp; telemetry.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="projects.html">← Back to Projects</a>
+      <a class="btn btn--ghost" href="index.html#contact">Get in touch</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Nathan's Portfolio. All Rights Reserved.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#" class="to-top">Back to top ↑</a>
+    </div>
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.topbar nav');
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>

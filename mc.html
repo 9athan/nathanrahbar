@@ -1,63 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movement Activated Controller</title>
-  <link rel="stylesheet" href="mc.css">
-  <script src="https://kit.fontawesome.com/cc6fc5e849.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movement Activated Controller — Nathan Rahbar</title>
+
+  <!-- Site-wide look (same as index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+
+
+  <!-- Page-specific tweaks -->
+  <link rel="stylesheet" href="mc.css" />
+  <script src="lightbox.js"></script>
+
 </head>
 <body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-  <!-- Navigation -->
-  <nav class="nav-wrapper">
-    <ul class="nav-menu">
-      <li><a href="index.html#header">Home</a></li>
-      <li><a href="index.html#about">About Me</a></li>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Page hero -->
+  <section class="page-hero container">
+    <div class="page-hero__copy">
+      <h1 class="display">Movement Activated Controller</h1>
+      <p class="lead">Presence-aware media control for play/pause using simple sensors and microcontroller logic.</p>
+      <div class="meta">
+        <span class="badge">Embedded • UX</span>
+        <span class="dot">•</span>
+        <span class="muted">Hardware + Software</span>
+      </div>
+      <p class="muted small">by Nathan Rahbar and Justin Herrera</p>
+    </div>
+  </section>
 
-  <!-- Title Section -->
-  <div class="content-section">
-    <h1>Movement Activated Controller</h1>
-    <p>by Nathan Rahbar and Justin Herrera</p>
-  </div>
-
-  <!-- Project Overview -->
-  <div class="content-section description">
-    <p>This project is a combination of hardware and software aimed to interface and control various streaming-based music/video apps such as Spotify, Apple Music, YouTube, and YouTube Music. The goal is to design and test the system for better refinement and gain experience in both hardware and software development.</p>
-  </div>
+  <!-- Overview -->
+  <section class="section container">
+    <h2 class="h2">Overview</h2>
+    <p class="muted">
+      This project combines hardware and software to interface with streaming apps (Spotify, Apple Music, YouTube, YouTube Music),
+      enabling presence-based <strong>play/pause</strong>. The goal is to prototype, test, and refine a simple controller
+      while building experience across embedded design and app control. <!-- preserved from original -->
+    </p>
+  </section>
 
   <!-- Project Specifications -->
-  <div class="content-section">
-    <h2>Project Specifications</h2>
-    <ul class="project-list">
-      <li><strong>User Identification:</strong> The controller defines a specific user to prevent music interruption by others.</li>
-      <li><strong>Use Limitations:</strong> Not suitable for collaborative environments like study rooms.</li>
-      <li><strong>Functionality:</strong> Only supports play/pause actions.</li>
-      <li><strong>Environmental Compatibility:</strong> Best for indoor, dry environments. Not suitable for outdoor or wet areas.</li>
-    </ul>
-  </div>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Project Specifications</h2>
+      <ul class="list">
+        <li><strong>User identification:</strong> Defines a specific user to avoid interruptions by others.</li>
+        <li><strong>Use limitations:</strong> Not intended for collaborative spaces (e.g., study rooms).</li>
+        <li><strong>Functionality:</strong> Focused on reliable play/pause only.</li>
+        <li><strong>Environment:</strong> Best indoors and dry locations; not for outdoor/wet areas.</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Future Improvements -->
-  <div class="content-section">
-    <h2>Future Improvements</h2>
-    <ul class="project-list">
-      <li><strong>Enhanced User Interface:</strong> Implement a more intuitive and visually appealing design, and ensure responsiveness.</li>
-      <li><strong>Voice Control Integration:</strong> Add voice command support, with multilingual capabilities for broader accessibility.</li>
+  <section class="section container">
+    <h2 class="h2">Future Improvements</h2>
+    <ul class="list">
+      <li><strong>UI polish:</strong> Clearer status/feedback and responsive layout.</li>
+      <li><strong>Voice control:</strong> Voice commands with potential multilingual support.</li>
     </ul>
-  </div>
+  </section>
 
-  <!-- Images Section -->
-  <div class="content-section">
-    <div class="image-stack">
-      <img src="images/step1.jpg" alt="Step 1">
-      <img src="images/step2.png" alt="Step 2">
-      <img src="images/step3.png" alt="Step 3">
+  <!-- Gallery -->
+  <section class="section container">
+    <h2 class="h2">Gallery</h2>
+    <div class="gallery">
+      <figure class="card">
+        <img src="images/step1.jpg" alt="Prototype setup step 1" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Prototype setup</strong>
+          <p class="muted">Initial wiring and sensor placement.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/step2.png" alt="Implementation step 2" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Implementation</strong>
+          <p class="muted">Iterating on signal conditioning and debounce.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/step3.png" alt="Validation step 3" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Validation</strong>
+          <p class="muted">Play/pause reliability testing across apps.</p>
+        </figcaption>
+      </figure>
     </div>
-  </div>
 
+    <div class="cta-row">
+      <a class="btn" href="projects.html">← Back to Projects</a>
+      <a class="btn btn--ghost" href="index.html#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.topbar nav');
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+
+    // Optional fade on internal nav links
+    document.querySelectorAll('a.fade-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        setTimeout(() => (window.location.href = link.href), 250);
+      });
+    });
+  </script>
 </body>
 </html>

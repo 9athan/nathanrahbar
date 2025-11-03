@@ -1,229 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content ="IE-edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nathan Rahbar</title>
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-	<script src="https://kit.fontawesome.com/cc6fc5e849.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nathan Rahbar</title>
+  <meta name="description" content="Hardware design • PCB layout • Embedded systems" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<div id="header">
-	<div class="container">
-		<nav>
-			<ul id="sidemenu">
-				<li><a href="#header">Home</a></li>
-				<li><a href="#about">About Me</a></li>
-				<li><a href="#portfolio">Portfolio</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-			</ul>
-			<i class="fa-solid fa-bars" onclick="openmenu()"></i>
-		</nav>
-		<div class="header-text">
-			<h1> <span>Nathan Rahbar</span><br> Torrance, California</h1>
-			<h2>Computer Engineering, B.S</h2>
-		</div>
-	</div>
-</div>
-<!------about------>
-<div id="about"></div>
-<div class="container">
-	<div class="row">
-		<div class="about-col-1">
-			<img src="images/user.jpg">
-		</div>
-		<div class="about-col-2">
-			<h1 class="sub-title">About Me</h1>
-			<p>I'm a Senior at Cal Poly Pomona pursuing a B.S. in Computer Engineering with a deep interest in hardware design, PCB layout, and embedded systems. I'm passionate about how electronic systems are built from the circuit level up—designing, testing, and iterating to bring ideas to life.</p>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-				<div class="tab-titles">
-					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-					<p class="tab-links" onclick="opentab('experience')">Experience</p>
-					<p class="tab-links" onclick="opentab('education')">Education</p>
-				</div>
-				<div class="tab-contents active-tab" id="skills">
-					<ul>
-						<li><span>PCB Design</span><br>Professional experience designing PCBs, using Altium Designer and KiCad.</li>
-						<li><span>Embedded Systems</span><br>Professional experince with microcontrollers and C++.</li>
-						<li><span>Digital Logic Design</span><br>Designing Digital Logic Circuits</li>
-						<li><span>PSpice</span><br>Design and Simulate Circuits</li>
-						<li><span>Code</span><br>C/C++/C#, Assembly, Verilog, VHDL, Python, HTML/CSS</li>
-					</ul>
-				</div>
-				<div class="tab-contents" id="experience">
-					<ul>
-						<li><span>Rivian (2025)</span><br>Prototype Electrical Engineering Intern</li>
-						<li><span>In-N-Out (2021-2022)</span><br>Level 4 Work Associate</li>
-					</ul>
-				</div>
-				<div class="tab-contents" id="education">
-					<ul>
-						<li><span>2022-Current</span><br>Computer Engineering B.S at Cal Poly Pomona<br> GPA: 3.73</li>
-						<li><span>2018-2022</span><br>North High School<br>GPA: 3.5</li>
-
-					</ul>
-				</div>
-		</div>
-	</div>
-</div>
-<!------------services--------->
-<div id="services" hidden>
-	<div class="container">
-		<h1 class="sub-title">My Services</h1>		
-		<div class="services-list">
-			
-			<div>
-				<i class="fa-solid fa-chalkboard-user"></i>
-				<h2>Tutoring</h2>
-				<p>I can help you learn in any math class ranging from Pre-Algebra to Calculus!</p>
-				<a href="#">Learn more</a>
-			</div>
-		</div>
-	</div>
-</div>
-<!------------portfolio--------->
-<div id="portfolio">
-	<div class="container">
-		<h1 class="sub-title">Portfolio</h1>	
-		<div class="work-list">
-			<div class="work">
-				<img src="images/work-1.jpg" >
-				<div class="layer">
-					<h3>Automatic Music Sensor</h3>
-					<p>Plays/resumes music once you leave/enter your room.</p>
-					<a href="mc.html#music"><i class="fa-solid fa-up-right-from-square"></i></a>
-				</div>
-			</div>
-			<div class="work">
-				<img src="images/work-2.png" >
-				<div class="layer">
-					<h3>Video Game Controller</h3>
-					<p>Designed a PCB for a Video Game Controller using Altium Designer.</p>
-					<a href="vc.html"><i class="fa-solid fa-up-right-from-square"></i></a>
-				</div>
-			</div>
-			<div class="work">
-				<img src="images/work-3.png" >
-				<div class="layer">
-					<h3>Noise Pulse Eliminator</h3>
-					<p>Developed a Noise Pulse Eliminator circuit using Verilog to filter out unwanted noise pulses in digital signals.</p>
-					<a href="np.html#music"><i class="fa-solid fa-up-right-from-square"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Project Teams Section -->
-<div id="project-teams">
-	<div class="container">
-	  <h1 class="sub-title">Project Teams</h1>
-	  <div class="work-list">
-		<!-- Team 1 -->
-		<div class="work">
-		  <img src="images/ngcp.jfif" alt="Team 1">
-		  <div class="layer">
-			<h3>Northrop Grumman Collaboration Project</h3>
-			<p>Collaborating on the design and development of a Nucleo Shield for an Unmanned Ground Vehicle (UGV)</p>
-			<a href="ngcp.html"><i class="fa-solid fa-up-right-from-square"></i></a>
-		  </div>
-		</div>
-		<!-- Team 2 -->
-		<div class="work">
-		  <img src="images/fsae.jfif" alt="Team 2">
-		  <div class="layer">
-			<h3>Formula SAE</h3>
-			<p>Designed and developed PCBs and schematics using Altium Designer for the vehicle's electronic systems</p>
-			<a href="fsae.html"><i class="fa-solid fa-up-right-from-square"></i></a>
-		  </div>
-		</div>
-		<!-- Team 3 -->
-		<div class="work">
-		  <img src="images/cemarc.png" alt="Team 3">
-		  <div class="layer">
-			<h3>CEMARC</h3>
-			<p>Contributing to the design and fully autonomous recovery system for a launch vehicle.</p>
-			<a href="cemarc.html"><i class="fa-solid fa-up-right-from-square"></i></a>
-		  </div>
-		</div>
-	  </div>
-	</div>
+<!-- Hero -->
+<main id="home" class="hero container">
+  <div class="hero-copy">
+    <h1 class="display">Nathan Rahbar</h1>
+    <p class="lead">I'm currently a senior at Cal Poly Pomona, pursuing undergraduate studies in Computer Engineering! I enjoy solving hardware problems by combining PCB design and embedded systems. Outside of school, I powerlift for fun!</p>
+    <div class="cta">
+      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn btn--ghost" href="#contact">Get in touch</a>
+    </div>
   </div>
-  
-<!------------contact--------->
-<div id="contact">
-	<div class="container">
-		<div class="row">
-			<div class="contact-left">
-				<h1 class="sub-title">Contact Me</h1>
-				<p><i class="fa-solid fa-inbox"></i>naterahbar@gmail.com</p>
-				
-				<div class="social-icons">
-					<a href="https://www.linkedin.com/in/nathanrahbar/"><i class="fa-brands fa-linkedin-in"></i></a>
-				</div>
-				
-			</div>
-			<div class="contact-right">
-				<form name="submit-to-google-sheet">
-					<input type="text" name="Name" placeholder="Your Name" required>
-					<input type="email" name="Email"placeholder="Your Email" required>
-					<textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
-					<button type="submit" class="btn btn2">Submit</button>
-				</form>
-				<span id="msg"></span>
-			</div>
-		</div>
-	</div>
-<div class="copyright">Copyright © Nathan <i class="fa-solid fa-chess-king"></i></div>
-</div>
 
-<script>
+  <!-- Rotating hero -->
+  <figure class="hero-shot" aria-hidden="true">
+    <div class="hero-rotator" id="heroRotator"></div>
+  </figure>
+</main>
 
-	var tablinks = document.getElementsByClassName("tab-links");
-	var tabcontents = document.getElementsByClassName("tab-contents");
-	
-	function opentab(tabname){
-		for(tablink of tablinks){
-			tablink.classList.remove("active-link")
-		}
-		for(tabcontent of tabcontents){
-			tabcontent.classList.remove("active-tab")
-		}
-		event.currentTarget.classList.add("active-link");
-		document.getElementById(tabname).classList.add("active-tab");
-	}
-</script>
-<script>
-	var sidemenu = document.getElementById("sidemenu");
 
-	function openmenu(){
-		sidemenu.style.right = "0";
-	}
-	function closemenu(){
-		sidemenu.style.right = "-200px";
-	}
-</script>
+  <!-- Experience -->
+  <section id="experience" class="section container">
+    <h2 class="h2">Experience</h2>
+    <div class="timeline">
+      <article class="xp">
+        <a href="rivian.html" class="card-link" style="text-decoration:none; color:inherit;">
+          <header>
+            <h3>Prototype Electrical Engineering Intern</h3>
+            <div class="meta">
+              <span>Rivian</span><span>•</span><span>2025</span>
+            </div>
+          </header>
+          <p>Board bring-up, logic analyzer/scope testing, high-speed comms, and PCB rework.</p>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Skills</h2>
+      <div class="pill-grid">
+        <span class="pill">PCB Design</span>
+        <span class="pill">Embedded Systems</span>
+        <span class="pill">High-Speed Communication</span>
+        <span class="pill">Simulations</span>
+        <span class="pill">C/C++</span>
+        <span class="pill">Prototyping/Debugging</span>
+        <span class="pill">Power Electronics</span>
+        <span class="pill">Lab Equipment</span>
+        <span class="pill">Altium</span>
+        <span class="pill">KiCad</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container">
+    <h2 class="h2">Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/work-2.png" alt="Video Game Controller PCB" loading="lazy">
+        <div class="card-body">
+          <h3>Video Game Controller</h3>
+          <p>Custom controller PCB designed in Altium; BLE to host, analog sticks & buttons.</p>
+          <a href="vc.html" class="card-link">Learn more →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/work-3.png" alt="Noise Pulse Eliminator" loading="lazy">
+        <div class="card-body">
+          <h3>Noise Pulse Eliminator</h3>
+          <p>Verilog filter removing unwanted digital spikes while preserving timing.</p>
+          <a href="np.html" class="card-link">Learn more →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/work-1.jpg" alt="Automatic Music Sensor" loading="lazy">
+        <div class="card-body">
+          <h3>Automatic Music Sensor</h3>
+          <p>Presence-aware music playback using sensors and microcontroller logic.</p>
+          <a href="mc.html#music" class="card-link">Learn more →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Project Teams -->
+  <section id="project-teams" class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Project Teams</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="images/ngcp.jfif" alt="Northrop Grumman Collaboration Project" loading="lazy">
+          <div class="card-body">
+            <h3>Northrop Grumman Collaboration Project</h3>
+            <p>Designed and developed a Nucleo shield for an Unmanned Ground Vehicle (UGV).</p>
+            <a href="ngcp.html" class="card-link">Learn more →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/fsae.jfif" alt="Formula SAE" loading="lazy">
+          <div class="card-body">
+            <h3>Formula SAE</h3>
+            <p>Collaborated on vehicle electronic systems including PCB design and schematics.</p>
+            <a href="fsae.html" class="card-link">Learn more →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/cemarc.png" alt="CEMARC" loading="lazy">
+          <div class="card-body">
+            <h3>CEMARC</h3>
+            <p>Worked on an autonomous recovery system for a launch vehicle, focusing on avionics and control.</p>
+            <a href="cemarc.html" class="card-link">Learn more →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <div class="split">
+      <div>
+        <h2 class="h2">Get in touch</h2>
+        <p class="muted">
+          naterahbar@gmail.com ·
+          <a href="https://www.linkedin.com/in/nathanrahbar/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+
+      <form name="submit-to-google-sheet" class="form">
+        <label>
+          <span>Your Name</span>
+          <input name="Name" required />
+        </label>
+        <label>
+          <span>Your Email</span>
+          <input type="email" name="Email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="Message" rows="5"></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+        <span id="msg" role="status" aria-live="polite"></span>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
   <script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbx5gbPq27Cq-mLAPECZO9a_hFl7hrBKJmLfCcI1l6c6Blb-WZ6BdW2gOgbNQiBM5qs_7A/exec'
-	const form = document.forms['submit-to-google-sheet']
-	const msg = document.getElementById("msg")
-  
-	form.addEventListener('submit', e => {
-	  e.preventDefault()
-	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-		.then(response => {
-			msg.innerHTML= "Message sent successfully"
-			setTimeout(function(){
-				msg.innerHTML = ""
-			},5000);
-			form.reset()
-		})
-		.catch(error => console.error('Error!', error.message))
-	})
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.topbar nav');
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx5gbPq27Cq-mLAPECZO9a_hFl7hrBKJmLfCcI1l6c6Blb-WZ6BdW2gOgbNQiBM5qs_7A/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
+
+    form?.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(() => {
+          msg.textContent = 'Message sent!';
+          setTimeout(() => (msg.textContent = ''), 4000);
+          form.reset();
+        })
+        .catch(() => (msg.textContent = 'Something went wrong.'));
+    });
   </script>
+  <script>
+  // ===== HERO AUTOSWIPE =====
+  (function(){
+    // Respect reduced motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Point to whatever images you have available (uses existing site images).
+    // Add/remove paths as you like — keep at least 1 item.
+    const HERO_IMAGES = [
+      'images/nate.jpg',
+      'images/nate2.png',
+      'images/nate3.png',
+      'images/nate4.jpg',
+      'images/nate5.jpg'
+    ];
+
+    const rotator = document.getElementById('heroRotator');
+    if (!rotator || !HERO_IMAGES.length) return;
+
+    // Build slides
+    HERO_IMAGES.forEach((src, i) => {
+      const s = document.createElement('div');
+      s.className = 'hero-slide' + (i === 0 ? ' is-active' : '');
+      s.style.backgroundImage = `url('${src}')`;
+      rotator.appendChild(s);
+    });
+
+    const slides = Array.from(rotator.children);
+    let idx = 0, timerId = null, paused = false;
+    const INTERVAL = 4500; // ms
+
+    function show(i){
+      slides[idx]?.classList.remove('is-active');
+      idx = (i + slides.length) % slides.length;
+      slides[idx]?.classList.add('is-active');
+    }
+
+    function start(){
+      if (prefersReduced || paused || timerId) return;
+      timerId = setInterval(() => show(idx + 1), INTERVAL);
+    }
+    function stop(){
+      if (!timerId) return;
+      clearInterval(timerId);
+      timerId = null;
+    }
+
+    // Start unless reduced motion
+    if (!prefersReduced) {
+  // Start slideshow right away
+  start();
+  // Trigger first image change after a short delay
+  setTimeout(() => show(idx + 1), INTERVAL);
+}
+
+
+    // Pause on hover (desktop)
+    rotator.addEventListener('mouseenter', () => { paused = true; stop(); });
+    rotator.addEventListener('mouseleave', () => { paused = false; start(); });
+
+    // Restart on visibility change (e.g., tab switch)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop(); else start();
+    });
+
+    // Responsive: re-apply radius/border from CSS if needed (slides already inherit)
+  })();
+</script>
+
 </body>
 </html>

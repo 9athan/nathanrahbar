@@ -1,65 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formula SAE Project</title>
-  <link rel="stylesheet" href="fsae.css">
-  <script src="https://kit.fontawesome.com/cc6fc5e849.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formula SAE — Nathan Rahbar</title>
+
+  <!-- Site-wide look (same as index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+
+
+  <!-- Page-specific tweaks -->
+  <link rel="stylesheet" href="fsae.css" />
+  <script src="lightbox.js"></script>
+
+  
 </head>
 <body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-<!-- Top Navigation Bar -->
-<nav class="topnav">
-    <div id="topnav">
-      <div class="container">
-        <ul id="sidemenu">
-            <li><a href="index.html#header">Home</a></li>
-            <li><a href="index.html#about">About Me</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-          </ul>
-          
+  <!-- Page hero -->
+  <section class="page-hero container">
+    <div class="page-hero__copy">
+      <h1 class="display">Formula SAE</h1>
+      <p class="lead">
+        Electrical team — Accumulator focus. PCB design around HV constraints, thermal monitoring, and integration.
+      </p>
+      <div class="meta">
+        <span class="badge">Role: Accumulator / PCBs</span>
+        <span class="dot">•</span>
+        <span class="muted">Student competition</span>
       </div>
     </div>
-  </nav>
-  
-  <!-- Race Car Background -->
-  <div class="racecar-bg">
-    <img src="images/car.png" alt="Moving Race Car" class="racecar" />
-  </div>
+    <figure class="page-hero__shot" aria-hidden="true"></figure>
+  </section>
 
-  <!-- Scrollable Sections -->
-  <div class="content-section">
-    <h1>Formula SAE Project</h1>
-    <p>FSAE is one of the largest competitions of its kind in the world, bringing together students from dozens of countries across the globe. As competitors, we put in hundreds of hours of hands-on engineering as we design, build, and test our race car from the ground up, all while being full-time students at Cal Poly Pomona.</p>
-  </div>
-  <div class="content-section description">
-    <p>I am part of the <strong>Electrical Team</strong>, specifically the <strong>Accumulator Team</strong>. I have a strong focus on <strong>designing and devloping PCBs while being cautious of High Voltage concerns</strong>.</p>
-  </div>
- 
-  <div class="content-section">
-    <p><strong>Accomplishments</strong></p>
-    <ul class="project-list">
-      <li>Designed accumulator board in Altium</li>
-      <li>Built around High Voltage lines while meeting space requirements</li>
-      <li>Integrated temperature sensors to ensure our battery stays at a normal temperature </li>
-    </ul>
-  </div>
+  <!-- Overview -->
+  <section class="section container">
+    <h2 class="h2">Overview</h2>
+    <p class="muted">
+      Formula SAE is a global competition where students design, build, and validate a race car end-to-end while
+      balancing safety, performance, and manufacturability. I contribute to the <strong>Electrical</strong> group on the
+      <strong>Accumulator</strong> (HV battery) side—owning PCB design, component selection, and integration with thermal
+      and protection strategies. :contentReference[oaicite:2]{index=2}
+    </p>
+  </section>
 
-  <div class="content-section">
-    <div class="image-gallery">
-      <img src="images/fsae_trace.png" alt="Racecar Top View">
-      <img src="images/fsae_pcb.png" alt="Battery Module">
+  <!-- Accomplishments -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Accomplishments</h2>
+      <ul class="list">
+        <li>Designed accumulator board in Altium with space and creepage/clearance constraints. :contentReference[oaicite:3]{index=3}</li>
+        <li>Routed around HV lines while meeting packaging requirements. :contentReference[oaicite:4]{index=4}</li>
+        <li>Integrated temperature sensing for battery thermal monitoring. :contentReference[oaicite:5]{index=5}</li>
+      </ul>
     </div>
-  </div>
+  </section>
 
-  <!--<div class="content-section">
-    <div class="image-stack">
-      <img src="images/fsae3.png" alt="Telemetry PCB">
-      <img src="images/fsae4.png" alt="Harness Diagram">
+  <!-- Gallery -->
+  <section class="section container">
+    <h2 class="h2">Gallery</h2>
+    <div class="gallery">
+      <figure class="card">
+        <img src="images/fsae_trace.png" alt="Accumulator trace layout" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Trace layout</strong>
+          <p class="muted">Space-aware routing around HV regions.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/fsae_pcb.png" alt="Accumulator PCB" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Accumulator PCB</strong>
+          <p class="muted">Board view with thermal sensor placement.</p>
+        </figcaption>
+      </figure>
     </div>
-  </div>-->
 
+    <div class="cta-row">
+      <a class="btn" href="projects.html">← Back to Projects</a>
+      <a class="btn btn--ghost" href="index.html#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.topbar nav');
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>

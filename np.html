@@ -1,73 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noise Pulse Eliminator</title>
-  <link rel="stylesheet" href="np.css">
-  <script src="https://kit.fontawesome.com/cc6fc5e849.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noise Pulse Eliminator — Nathan Rahbar</title>
+
+  <!-- Site-wide look (same as index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+
+  <!-- Page-specific tweaks -->
+  <link rel="stylesheet" href="np.css" />
+  <script src="lightbox.js"></script>
+
 </head>
 <body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-  <!-- Navigation -->
-  <nav class="nav-wrapper">
-    <ul class="nav-menu">
-      <li><a href="index.html#header">Home</a></li>
-      <li><a href="index.html#about">About Me</a></li>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Page hero -->
+  <section class="page-hero container">
+    <div class="page-hero__copy">
+      <h1 class="display">Noise Pulse Eliminator</h1>
+      <p class="lead">FSM + Verilog filter that rejects single-cycle glitches and stabilizes the measured signal.</p>
+      <div class="meta">
+        <span class="badge">Digital Design</span>
+        <span class="dot">•</span>
+        <span class="muted">HDL • FSM • Testbench</span>
+      </div>
+    </div>
 
-  <!-- Title Section -->
-  <div class="content-section">
-    <h1>Noise Pulse Eliminator</h1>
-    <p>by Nathan Rahbar</p>
-  </div>
+  </section>
 
-  <!-- Project Overview -->
-  <div class="content-section description">
-    <p>This project implements a circuit that eliminates noise pulses—transitions lasting only one clock cycle or less—by filtering out high/low spikes and producing a clean, stabilized output signal. The system uses a finite state machine and Verilog HDL to detect valid input changes while suppressing glitches.</p>
-  </div>
+  <!-- Overview -->
+  <section class="section container">
+    <h2 class="h2">Overview</h2>
+    <p class="muted">
+      This design suppresses brief high/low spikes (≤ 1 clock) using a <strong>four-state Moore FSM</strong> implemented in
+      <strong>Verilog</strong>, producing a clean, debounced output suitable for downstream logic. It was validated with a
+      targeted stimulus sequence and waveform inspection. <!-- content preserved from original -->
+    </p>
+  </section>
 
   <!-- Deliverables -->
-  <div class="content-section">
-    <h2>Deliverables</h2>
-    <ul class="project-list">
-      <li><strong>FSM Design:</strong> Create a state diagram with four states and one Moore output.</li>
-      <li><strong>Verilog Module:</strong> Code the logic using one or two always blocks with appropriate state encoding.</li>
-      <li><strong>Testbench:</strong> Simulate using a given input sequence to verify the design.</li>
-    </ul>
-  </div>
-
-  <!-- Future Improvements -->
-  <div class="content-section">
-    <h2>Future Improvements</h2>
-    <ul class="project-list">
-      <li><strong>Adjustable Noise Threshold:</strong> Enable the system to dynamically adjust filtering thresholds based on operating conditions.</li>
-      <li><strong>Asynchronous Input Handling:</strong> Add synchronization logic for asynchronous signal environments.</li>
-    </ul>
-  </div>
-  <!-- Link to Code -->
-  <div class="content-section">
-    <h2>Code</h2>
-    <p>You can view the full Verilog implementation and simulation on HDLBits:</p>
-    <a href="https://hdlbits.01xz.net/wiki/Iverilog?load=cEEp9E" class="repo-link" target="_blank">View Code</a>
-  </div>
-
-  <!-- Images Section -->
-  <div class="content-section">
-    <div class="image-stack">
-      <img src="images/fsm.png" alt="FSM Diagram">
-      <img src="images/waveform.png" alt="Waveform Timing">
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Deliverables</h2>
+      <ul class="list">
+        <li><strong>FSM Design:</strong> Four states with one Moore output (glitch-filtered).</li>
+        <li><strong>Verilog Module:</strong> Encoded states with one/two <code>always</code> blocks.</li>
+        <li><strong>Testbench:</strong> Simulation covering single-cycle spikes and valid transitions.</li>
+      </ul>
     </div>
-  </div>
+  </section>
 
+  <!-- Improvements -->
+  <section class="section container">
+    <h2 class="h2">Future Improvements</h2>
+    <ul class="list">
+      <li><strong>Adjustable thresholds:</strong> Parameterize window length for different noise profiles.</li>
+      <li><strong>Async input sync:</strong> Add 2-FF synchronizers before FSM for metastability mitigation.</li>
+    </ul>
+  </section>
+
+  <!-- Code CTA -->
+  <section class="section container">
+    <h2 class="h2">Code</h2>
+    <p class="muted">View the Verilog implementation and simulation:</p>
+    <a href="https://hdlbits.01xz.net/wiki/Iverilog?load=cEEp9E" class="btn" target="_blank" rel="noopener">Open HDLBits Demo →</a>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section container">
+    <h2 class="h2">Gallery</h2>
+    <div class="gallery">
+      <figure class="card">
+        <img src="images/fsm.png" alt="FSM Diagram" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>FSM diagram</strong>
+          <p class="muted">State flow ensuring spikes don’t toggle output.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/waveform.png" alt="Waveform Timing" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Timing waveform</strong>
+          <p class="muted">Single-cycle glitches suppressed; valid edges pass.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="projects.html">← Back to Projects</a>
+      <a class="btn btn--ghost" href="index.html#contact">Get in touch</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Nathan's Portfolio. All Rights Reserved.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#" class="to-top">Back to top ↑</a>
+    </div>
   </footer>
 
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.topbar nav');
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+
+    // Smooth fade on nav (optional)
+    document.querySelectorAll('a.fade-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        setTimeout(() => (window.location.href = link.href), 250);
+      });
+    });
+  </script>
 </body>
 </html>

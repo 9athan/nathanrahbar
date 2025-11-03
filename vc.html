@@ -1,68 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Game Controller</title>
-  <link rel="stylesheet" href="vc.css">
-  <script src="https://kit.fontawesome.com/cc6fc5e849.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Game Controller — Nathan Rahbar</title>
+
+  <!-- Site-wide look (same as index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+
+
+  <!-- Page-specific tweaks -->
+  <link rel="stylesheet" href="vc.css" />
+  <script src="lightbox.js"></script>
+
 </head>
 <body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
-  <!-- Navigation -->
-  <nav class="nav-wrapper">
-    <ul class="nav-menu">
-      <li><a href="index.html#header">Home</a></li>
-      <li><a href="index.html#about">About Me</a></li>
-      <li><a href="index.html#portfolio">Portfolio</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Page hero -->
+  <section class="page-hero container">
+    <div class="page-hero__copy">
+      <h1 class="display">Video Game Controller</h1>
+      <p class="lead">
+        ESP32-based custom controller with analog sticks, buttons, and USB HID — full PCB designed in Altium.
+      </p>
+      <div class="meta">
+        <span class="badge">Embedded • PCB</span>
+        <span class="dot">•</span>
+        <span class="muted">Firmware • USB HID</span>
+      </div>
+    </div>
+  </section>
 
-  <!-- Title Section -->
-  <div class="content-section">
-    <h1>Video Game Controller</h1>
-    <p>by Nathan Rahbar</p>
-  </div>
-
-  <!-- Project Overview -->
-  <div class="content-section description">
-    <p>Our project goal is to design and develop a custom video game controller using the ESP32 microcontroller. The controller will feature analog sticks, buttons, and USB connectivity to interface with a computer. We also plan to design a printed circuit board (PCB) using Altium Designer to integrate the necessary components efficiently. The controller will function as a Human Interface Device (HID), allowing it to be recognized as a standard input device by gaming applications and operating systems.</p>
-  </div>
+  <!-- Overview -->
+  <section class="section container">
+    <h2 class="h2">Overview</h2>
+    <p class="muted">
+      The goal was to build a custom controller using an <strong>ESP32</strong> with <strong>analog sticks</strong> and
+      <strong>buttons</strong>, recognized by the host as a standard <strong>USB HID</strong> device. The hardware is
+      integrated on a custom PCB in <strong>Altium Designer</strong> for clean packaging and reliable I/O.
+    </p>
+  </section>
 
   <!-- Deliverables -->
-  <div class="content-section">
-    <h2>Deliverables</h2>
-    <ul class="project-list">
-      <li><strong>ESP32 Controller Hardware:</strong> Integrate analog sticks, buttons, and design a custom PCB in Altium Designer.</li>
-      <li><strong>Firmware Development:</strong> Configure ESP32 as a USB HID device, implement USB input reading and communication.</li>
-      <li><strong>Testing and Debugging:</strong> Ensure responsive inputs and platform compatibility.</li>
-    </ul>
-  </div>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Deliverables</h2>
+      <ul class="list">
+        <li><strong>ESP32 Controller Hardware:</strong> Sticks + buttons on a custom PCB (Altium).</li>
+        <li><strong>Firmware:</strong> USB HID input mapping and communication.</li>
+        <li><strong>Testing &amp; Debugging:</strong> Responsive inputs and platform compatibility.</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Future Improvements -->
-  <div class="content-section">
-    <h2>Future Improvements</h2>
-    <ul class="project-list">
-      <li><strong>Remove DevBoard:</strong> Design with only the ESP32 chip and a USB-C module for integration.</li>
-      <li><strong>3D-Printed Case:</strong> Use SolidWorks to design a custom case for improved ergonomics and appearance.</li>
+  <section class="section container">
+    <h2 class="h2">Future Improvements</h2>
+    <ul class="list">
+      <li><strong>Remove DevBoard:</strong> Use ESP32 module + native USB-C on the PCB.</li>
+      <li><strong>3D-Printed Case:</strong> SolidWorks enclosure for ergonomics and finish.</li>
     </ul>
-  </div>
+  </section>
 
-  <!-- Images Section -->
-  <div class="content-section">
-    <div class="image-stack">
-      <img src="images/vc-schem.png" alt="Schematic">
-      <img src="images/dfx.png" alt="Design for Assembly">
-      <img src="images/vc-traces.png" alt="Traces">
-      <img src="images/vc-pcb.png" alt="PCB Layout">
+  <!-- Gallery -->
+  <section class="section container">
+    <h2 class="h2">Gallery</h2>
+    <div class="gallery">
+      <figure class="card">
+        <img src="images/vc-schem.png" alt="Controller schematic" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Schematic</strong>
+          <p class="muted">Signal map and interfaces for the ESP32-based design.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/dfx.png" alt="Design for Assembly considerations" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>DFA/DFM</strong>
+          <p class="muted">Placement and assembly constraints.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/vc-traces.png" alt="Trace routing" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Trace routing</strong>
+          <p class="muted">Power and signal routing for inputs and USB.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/vc-pcb.png" alt="PCB layout" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>PCB layout</strong>
+          <p class="muted">Final board view with connectors and components.</p>
+        </figcaption>
+      </figure>
     </div>
-  </div>
+
+    <div class="cta-row">
+      <a class="btn" href="projects.html">← Back to Projects</a>
+      <a class="btn btn--ghost" href="index.html#contact">Get in touch</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Nathan's Portfolio. All Rights Reserved.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#" class="to-top">Back to top ↑</a>
+    </div>
   </footer>
 
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.topbar nav');
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+
+    // Optional fade on nav links
+    document.querySelectorAll('a.fade-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        setTimeout(() => (window.location.href = link.href), 250);
+      });
+    });
+  </script>
 </body>
 </html>

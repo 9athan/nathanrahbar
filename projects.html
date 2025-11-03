@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Nathan Rahbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    body.loaded {
+      opacity: 1;
+    }
+    nav a.active {
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <!-- Projects Section -->
+  <section id="projects" class="section container">
+    <h2 class="h2">Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/work-2.png" alt="Video Game Controller">
+        <div class="card-body">
+          <h3>Video Game Controller</h3>
+          <p>Custom PCB designed in Altium; BLE to host, analog sticks & buttons.</p>
+          <a href="vc.html" class="card-link">Learn more →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/work-3.png" alt="Noise Pulse Eliminator">
+        <div class="card-body">
+          <h3>Noise Pulse Eliminator</h3>
+          <p>Verilog filter removing unwanted digital spikes while preserving timing.</p>
+          <a href="np.html" class="card-link">Learn more →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/work-1.jpg" alt="Automatic Music Sensor">
+        <div class="card-body">
+          <h3>Automatic Music Sensor</h3>
+          <p>Presence-aware music playback using sensors and microcontroller logic.</p>
+          <a href="mc.html#music" class="card-link">Learn more →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Project Teams Section -->
+  <section id="project-teams" class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Project Teams</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="images/ngcp.jfif" alt="Northrop Grumman Collaboration Project">
+          <div class="card-body">
+            <h3>Northrop Grumman Collaboration Project</h3>
+            <p>Designed and developed a Nucleo shield for an Unmanned Ground Vehicle (UGV).</p>
+            <a href="ngcp.html" class="card-link">Learn more →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/fsae.jfif" alt="Formula SAE">
+          <div class="card-body">
+            <h3>Formula SAE</h3>
+            <p>Collaborated on vehicle electronic systems including PCB design and schematics.</p>
+            <a href="fsae.html" class="card-link">Learn more →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/cemarc.png" alt="CEMARC">
+          <div class="card-body">
+            <h3>CEMARC</h3>
+            <p>Worked on an autonomous recovery system for a launch vehicle, focusing on avionics and control.</p>
+            <a href="cemarc.html" class="card-link">Learn more →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#projects" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on page load
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    // Fade transition on link click
+    document.querySelectorAll('a.fade-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 300);
+      });
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Teams — Nathan Rahbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="projects.html" class="btn btn--sm">Projects</a>
+        <a href="project-teams.html" class="btn btn--sm active">Teams</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="project-teams" class="section container">
+    <h2 class="h2">Project Teams</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/ngcp.jfif" alt="Northrop Grumman Collaboration" loading="lazy">
+        <div class="card-body">
+          <h3>Northrop Grumman Collaboration</h3>
+          <p>Worked on a Nucleo shield for UGV — power regulation and CAN communication.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/fsae.jfif" alt="Formula SAE" loading="lazy">
+        <div class="card-body">
+          <h3>Formula SAE</h3>
+          <p>Helped design HV battery and low-voltage PCBs, collaborating with mechanical subteam.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/cemarc.png" alt="CEMARC" loading="lazy">
+        <div class="card-body">
+          <h3>CEMARC</h3>
+          <p>Developed avionics layout for autonomous recovery system on rocket project.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#project-teams" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

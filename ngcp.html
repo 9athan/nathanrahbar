@@ -1,84 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Northrop Grumman Collaboration Project</title>
-  <link rel="stylesheet" href="ngcp.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGCP — Nathan Rahbar</title>
+
+  <!-- Site-wide look (same as index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
+
+
+  <!-- Page-specific tweaks -->
+  <link rel="stylesheet" href="ngcp.css" />
+  <script src="lightbox.js"></script>
+
 </head>
-  <!-- Top Navigation Bar -->
-  <nav class="topnav">
-    <div id="topnav">
-      <div class="container">
-        <nav>
-          <ul id="sidemenu">
-            <li><a href="index.html#header">Home</a></li>
-            <li><a href="index.html#about">About Me</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index2.html" class="brand">NR</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#project-teams">Teams</a>
+        <a href="index.html#contact" class="btn btn--sm">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero container">
+    <div class="page-hero__copy">
+      <h1 class="display">Northrop Grumman Collaboration Project</h1>
+      <p class="lead">
+        UGV electrical/digital hardware — Nucleo shield design for power regulation and IMU integration across a multi-team program.
+      </p>
+      <div class="meta">
+        <span class="badge">Role: Electrical / Digital HW</span>
+        <span class="dot">•</span>
+        <span class="muted">Program: NGCP</span>
       </div>
     </div>
-  </nav>
+    <figure class="page-hero__shot" aria-hidden="true"></figure>
+  </section>
 
+  <!-- Overview -->
+  <section class="section container">
+    <h2 class="h2">Overview</h2>
+    <p class="muted">
+      The <strong>Northrop Grumman Collaboration Project (NGCP)</strong> is a joint technology demonstration with
+      Cal Poly Pomona and Cal Poly SLO, giving students a real-world, interdisciplinary environment to apply classroom knowledge.
+      I’m on the <strong>Unmanned Ground Vehicle (UGV)</strong> team, focused on the <strong>Nucleo Shield</strong> for
+      regulated power delivery and IMU sensing. :contentReference[oaicite:2]{index=2}
+    </p>
+  </section>
 
+  <!-- Accomplishments -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="h2">Accomplishments</h2>
+      <ul class="list">
+        <li>Designed PCBs/schematics in <strong>Altium Designer</strong> for vehicle electronics; owned power regulation and IMU blocks for the shield.</li>
+        <li>Sourced/selected components balancing performance, cost, and availability.</li>
+        <li>Collaborated with mechanical, powertrain, and aero subteams for reliable integration.</li>
+      </ul>
+    </div>
+  </section>
 
-  <!-- Star Background -->
-  <div class="night">
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-  </div>
+  <!-- Gallery -->
+  <section class="section container">
+    <h2 class="h2">Gallery</h2>
+    <div class="gallery">
+      <figure class="card">
+        <img src="images/ngcp_trace.png" alt="NGCP trace layout" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Trace layout</strong>
+          <p class="muted">Shield routing with power/IMU constraints.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/ngcp_pcb.png" alt="NGCP PCB" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Shield PCB</strong>
+          <p class="muted">Board view for integration and testing.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/pwr_schem.png" alt="Power schematic" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>Power schematic</strong>
+          <p class="muted">Regulation and protection strategy.</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/imu_schem.png" alt="IMU schematic" loading="lazy" />
+        <figcaption class="card-body">
+          <strong>IMU schematic</strong>
+          <p class="muted">Sensing and interface definition.</p>
+        </figcaption>
+      </figure>
+    </div>
 
- <!-- Star Background -->
-<div class="night">
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-</div>
+    <div class="cta-row">
+      <a class="btn" href="projects.html">← Back to Projects</a>
+      <a class="btn btn--ghost" href="index.html#contact">Get in touch</a>
+    </div>
+  </section>
 
-<!-- Scrollable Centered Sections -->
-<div class="content-section">
-  <h1>Northrop Grumman Collaboration Project</h1>
-  <p>The Northrop Grumman Collaboration Project (NGCP) is a joint technology demonstration between Cal Poly Pomona (CPP) and Cal Poly San Luis Obispo (CP SLO). We provide a great interdisciplinary experience, allowing students to apply their classroom knowledge to solve real-life challenges. </p>
-</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nathan Rahbar</span>
+      <a href="#" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
 
-<div class="content-section">
-  <p>I am part of the <strong>Unmanned Ground Vehicle (UGV) Team</strong>, working closely on designing our autonomus vehicle. I'm specifically on the <strong>Electrical Digital Hardware Team</strong>, where I'm focusing on the <strong>design and development of a Nucleo Shield</strong></p>
-</div>
-
-<div class="content-section">
-  <p><strong>Accomplishments</strong></p>
-  <ul class="project-list">
-    <li>Designed and developed <strong>PCBs and schematics</strong> using <strong>Altium Designer</strong> for the vehicle's electronic systems. I was specifically in charge of the <strong>power regulation and IMU for our shield</strong>.</li>
-    <li>Sourced and selected components to meet performance, cost, and availability requirements.</li>
-    <li>Collaborated with mechanical, powertrain, and aerodynamics sub teams to optimize system integration and efficiency.</li>
-  </ul>
-</div>
-
-<!-- Section for Images 1 and 2 -->
-<div class="content-section">
-  <div class="image-gallery">
-    <img src="images/ngcp_trace.png" alt="Project Image 1">
-    <img src="images/ngcp_pcb.png" alt="Project Image 2">
-  </div>
-</div>
-
-<!-- Section for Images 3 and 4 (vertical layout) -->
-<div class="content-section">
-  <div class="image-stack">
-    <img src="images/pwr_schem.png" alt="Project Image 3">
-    <img src="images/imu_schem.png" alt="Project Image 4">
-  </div>
-</div>
-
-  
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.topbar nav');
+    burger?.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
