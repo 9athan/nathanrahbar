@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Create papers with links
   const papers = [
-    { label: "About Me", href: "index.html#home" },
+    { label: "About Me", href: "index2.html#home" },
     { label: "Experience", href: "rivian.html" },
     { label: "Projects", href: "projects.html" }
   ];
@@ -37,3 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
     folder.classList.toggle("open");
   });
 });
+
